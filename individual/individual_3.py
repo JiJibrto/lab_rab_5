@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import string
 
 # Путем вставок и удаления символов исправить ошибки:
 # в слове прроцесор;
@@ -14,13 +13,17 @@ if __name__ == '__main__':
     inp_text = str(input("Введите слово для исправления> "))
 
     if inp_text == "прроцесор":
-        inp_text = inp_text[:2]+inp_text[3:6]+'c'+inp_text[6:]
-    elif inp_text =="теекстовыйфайл":
-        inp_text = inp_text[:1]+inp_text[2:10]+" "+inp_text[10:]
+        inp_text = inp_text[:inp_text.find('р')]+inp_text[inp_text.find('р')+1:inp_text.find('с')+1]\
+                   + inp_text[inp_text.find('с'):]
+    elif inp_text == "теекстовыйфайл":
+        inp_text = inp_text[:inp_text.find('е')]+inp_text[inp_text.find('е')+1:inp_text.find('й')+1]\
+                   + " " + inp_text[inp_text.find('й')+1:]
     elif inp_text == "програма и аллгоритм":
-        inp_text = inp_text[:7]+'м'+inp_text[7:12]+inp_text[13:]
+        inp_text = inp_text[:inp_text.find('м')+1]+inp_text[inp_text.find('м'):inp_text.find('л')]\
+                   + inp_text[inp_text.find('л')+1:]
     elif inp_text == "процесор и паммять":
-        inp_text = inp_text[:6]+'c'+inp_text[6:14]+inp_text[15:]
+        inp_text = inp_text[:inp_text.find('с')+1]+inp_text[inp_text.find('с'):inp_text.find('м')]\
+                   + inp_text[inp_text.find('м')+1:]
     else:
         print("Я не ИИ и работаю только с заготовленными инпутами(", file=sys.stderr)
         exit(1)
