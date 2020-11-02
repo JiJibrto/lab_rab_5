@@ -13,8 +13,6 @@ if __name__ == '__main__':
         exit(1)
     inp_text = inp_text.replace(' ', '')
     inp_text = inp_text.lower()
-    inp_text = inp_text.lower()
-    inp_text = inp_text.replace(' ', '')
     k = len(inp_text)
     temp = ""
 
