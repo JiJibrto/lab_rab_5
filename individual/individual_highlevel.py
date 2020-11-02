@@ -11,9 +11,10 @@ if __name__ == '__main__':
     if inp_text.count(' ') != 2:
         print("ВВЕДИТЕ ПОЖАЛУЙСТА ТРИ СЛОВА ЧЕРЕЗ ПРОБЕЛ!!", file=sys.stderr)
         exit(1)
-
     inp_text = inp_text.replace(' ', '')
     inp_text = inp_text.lower()
+    inp_text = inp_text.lower()
+    inp_text = inp_text.replace(' ', '')
     k = len(inp_text)
     temp = ""
 
